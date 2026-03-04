@@ -40,13 +40,13 @@ public class Result<T> {
     }
 
     // 快速返回操作成功响应结果(带自定义提示信息)
-    public static Result success(String message) {
-        return new Result(0, message, null);
+    public static <T> Result<T> success(String message) {
+        return new Result<>(0, message, null);
     }
 
     // 快速返回操作失败响应结果(带自定义提示信息)
-    public static Result error(String message) {
-        return new Result(1, message, null);
+    public static <T> Result<T> error(String message) {
+        return new Result<>(1, message, null);
     }
 
 }

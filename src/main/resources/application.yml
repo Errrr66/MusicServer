@@ -49,6 +49,12 @@ spring:
           timeout: 3000
           writetimeout: 5000
 
+# DeepSeek API Configuration
+deepseek:
+  api-key: YOURDEEPSEEKAPIKEY # 替换为你的 DeepSeek API 密钥
+  base-url: https://api.deepseek.com
+  model: deepseek-chat
+
 # 配置 mybatis-plus
 mybatis-plus:
   type-aliases-package:   com.example.pojo # 实体类所在的包，允许用实体类类名作为别名
@@ -72,6 +78,7 @@ role-path-permissions:
       - "/artist/"
       - "/song/"
       - "/favorite/"
+      - "/chat/"
       - "/comment/"
       - "/banner/"
       - "/feedback/"
@@ -84,8 +91,13 @@ minio:
 
 
 # 前后端启动注意事项：
+# 确保已经安装并启动了 MySQL 数据库，并创建了名为 vibe_music 的数据库。
+# 请确保已经安装并启动了 Redis 服务。
+# 请确保已经安装并启动了 MinIO 服务器，并创建了名为 vibe-music-data 的 Bucket。
+# 请根据你的实际情况修改上述配置文件中的数据库、Redis、MinIO 和邮件服务的相关信息。
+# java版本为17
 # 运行 MinIO 服务器的命令（在 minio/bin 目录下运行）
-# D:\IntelliJ IDEA 2024.3.5\workspace\vibe-music\minio\bin>minio.exe server "D:\IntelliJ IDEA 2024.3.5\workspace\vibe-music\minio\data"
+# E:\IntelliJ IDEA\workspace\vibe-music\minio\bin>minio.exe server "E:\IntelliJ IDEA\workspace\vibe-music\minio\data"
 # 启动Redis服务。
 # admin管理端启动：npx pnpm dev
 # 前端启动：npm run dev
