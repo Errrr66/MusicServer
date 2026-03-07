@@ -51,7 +51,7 @@ spring:
 
 # DeepSeek API Configuration
 deepseek:
-  api-key: YOURDEEPSEEKAPIKEY # 替换为你的 DeepSeek API 密钥
+  api-key: sk-ae6fa52b68af466eac0480a8b4e6a853 # 替换为你的 DeepSeek API 密钥
   base-url: https://api.deepseek.com
   model: deepseek-chat
 
